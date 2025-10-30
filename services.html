@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="#" class="logo">
+      <img src="benz.png" alt="Mercedes-Benz logo" style="height:40px;">
+    </a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <h1>Our Services</h1>
+  <button onclick="openModal()">View Services</button>
+  <span onclick="closeModal()" style="cursor:pointer; float:right;">&times;</span>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <h2>Mercedes-Benz</h2>
+      <p>Welcome to the world of Mercedes-Benz. Our services include:</p>
+      <table>
+        <tr>
+          <th>Service</th>
+          <th>Cost Price (M)</th>
+          <th>Recommendations</th>
+        </tr>
+        <tr>
+          <td>Cars</td>
+          <td>100,000 - 1,500,000</td>
+          <td>Buy models that endure longer and are known for their durability.</td>
+        </tr>
+        <tr>
+          <td>Engine Repairs</td>
+          <td>10,000 - 35,000</td>
+          <td>Ensure your car's engine is in good condition to avoid severe problems.</td>
+        </tr>
+        <tr>
+          <td>Mercedes Parts</td>
+          <td>500 - 12,000</td>
+          <td>Regularly check your car—small damaged parts can lead to hazardous accidents.</td>
+        </tr>
+      </table>
+      <div id="item"><img src="repairs.webp" alt="Repairs"></div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    };
+
+    function openModal() {
+      document.getElementById('myModal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('myModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('myModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
